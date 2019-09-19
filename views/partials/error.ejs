@@ -1,0 +1,16 @@
+<!--error-->
+<%if(typeof error != ''){%>
+  <%if(error.length > 0){%>  
+    <div class="alert alert-danger">
+      <%= error%>
+    </div>
+  <%}%>
+<%}%>
+
+<!--err-->
+<%if(typeof err != 'undefined'){%>
+    <div class="alert alert-danger">
+      <%= err.msg%>
+    </div>
+<%}%>
+

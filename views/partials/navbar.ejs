@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a href="/" class="navbar-brand">Home</a>
+
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#mynav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="mynav">
+    <ul class="navbar-nav ml-auto">
+        <%if(typeof user == 'undefined'){%>
+      <li class="nav-item">
+        <a href="/user/login" class="nav-link">Login</a>
+      </li>
+      <li class="nav-item">
+        <a href="/user/register" class="nav-link">Register</a>
+      </li>
+      <%}%>
+      <%if(typeof user != 'undefined'){%>
+        <li class="nav-item">
+          <a href="/user/logout" class="nav-link">Logout</a>
+        </li>
+      <%}%>
+    </ul>
+  </div>
+</nav>

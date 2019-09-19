@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-6 mx-auto mt-4">
+      <div class="card card-body">
+        <form action="/user/register" method="Post">
+          <h3>Register</h3>
+          <%- include('../partials/error')%>
+          
+          <div class="from-group">
+            <label for="Name">Name</label>
+            <input type="text" value="<%= typeof user != 'undefined'? user.name : null%>" class="form-control" name="name" id="Name" placeholder="Name...">
+          </div>
+          <div class="from-group">
+              <label for="username">Username</label>
+              <input type="text" value="<%= typeof user != 'undefined'? user.username : null%>" class="form-control" name="username" id="username" placeholder="Username...">
+            </div>
+            <div class="from-group">
+              <label for="Email">Email</label>
+              <input type="email" value="<%= typeof user != 'undefined'? user.email : null%>" name="email" class="form-control" id="Email" placeholder="Email...">
+            </div>
+            <div class="from-group">
+              <label for="Password">Password</label>
+              <input type="password" value="<%= typeof user != 'undefined'? user.password : null%>" class="form-control" name="password" id="Password" placeholder="Password...">
+            </div>
+            <div class="from-group">
+              <label for="Confirm Password">Confirm Password</label>
+              <input type="password" value="<%= typeof user != 'undefined'? user.confirm : null%>" name="confirm" class="form-control" id="Confirm Password" placeholder="Confirm Password...">
+            </div>
+            <br />
+            <input type="submit" value="Register" class="btn btn-dark">
+        </form>
+      </div>
+    </div>
+  </div>
